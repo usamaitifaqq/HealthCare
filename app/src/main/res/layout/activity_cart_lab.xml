@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    tools:context=".activity.CartLabActivity">
+
+
+    <TextView
+        android:id="@+id/tvDDName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="HealthCare"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCartPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lab Test Cart Item"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDDName" />
+
+    <TextView
+        android:id="@+id/textViewLDPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Deliver Location : Rawalpindi"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartPackageName" />
+
+    <ListView
+        android:id="@+id/listViewCart"
+        android:layout_width="290dp"
+        android:layout_height="352dp"
+        android:ems="10"
+        android:editable="false"
+        android:text="Hi \nHello"
+        android:textColor="@color/white"
+        android:gravity="start|top"
+        android:layout_marginTop="20dp"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLDPackageName" />
+
+    <TextView
+        android:id="@+id/tvTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total Cost: 1280/-"
+        android:textSize="25dp"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/listViewCart"
+        app:layout_constraintStart_toStartOf="@+id/listViewCart"
+        app:layout_constraintTop_toBottomOf="@+id/listViewCart" />
+
+
+    <TextView
+        android:id="@+id/tvSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select Date"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="@+id/listViewCart"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalCost" />
+
+
+    <Button
+        android:id="@+id/buttonAppDate"
+        style="?android:spinnerStyle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="27/10/2023"
+        android:textAlignment="center"
+      
+        app:layout_constraintStart_toStartOf="@+id/tvSelectDate"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select Time"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/listViewCart"
+        app:layout_constraintHorizontal_bias="0.608"
+        
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalCost" />
+
+    <Button
+        android:id="@+id/buttonAppTime"
+        style="?android:spinnerStyle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/listViewCart"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECkOut"
+        app:layout_constraintEnd_toEndOf="@+id/listViewCart"
+       
+        app:layout_constraintTop_toBottomOf="@+id/buttonAppTime" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="@+id/listViewCart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/listViewCart"
+        app:layout_constraintTop_toTopOf="@+id/btnCheckout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
